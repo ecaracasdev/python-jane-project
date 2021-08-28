@@ -1,0 +1,104 @@
+[
+    {
+        "day": "110321",
+        "temperature": "25",
+        "concentration[uM]": 3,
+        "media[Fi]": 611757.6860000001
+    },
+    {
+        "day": "110321",
+        "temperature": "25",
+        "concentration[uM]": 5,
+        "media[Fi]": 523625.86466666666
+    },
+    {
+        "day": "110321",
+        "temperature": "30",
+        "concentration[uM]": 5,
+        "media[Fi]": 518330.856
+    },
+    {
+        "day": "110321",
+        "temperature": "30",
+        "concentration[uM]": 3,
+        "media[Fi]": 594793.4906666667
+    },
+    {
+        "day": "110321",
+        "temperature": "30",
+        "concentration[uM]": 5,
+        "media[Fi]": 518239.29033333325
+    },
+    {
+        "day": "110321",
+        "temperature": "37",
+        "concentration[uM]": 5,
+        "media[Fi]": 514145.819
+    },
+    {
+        "day": "110321",
+        "temperature": "37",
+        "concentration[uM]": 3,
+        "media[Fi]": 575844.5016666666
+    },
+    {
+        "day": "110321",
+        "temperature": "37",
+        "concentration[uM]": 5,
+        "media[Fi]": 495729.8803333333
+    },
+    {
+        "day": "120321",
+        "temperature": "25",
+        "concentration[uM]": 5,
+        "media[Fi]": 493886.796
+    },
+    {
+        "day": "120321",
+        "temperature": "25",
+        "concentration[uM]": 3,
+        "media[Fi]": 595150.621
+    },
+    {
+        "day": "120321",
+        "temperature": "25",
+        "concentration[uM]": 5,
+        "media[Fi]": 511127.7
+    },
+    {
+        "day": "120321",
+        "temperature": "30",
+        "concentration[uM]": 5,
+        "media[Fi]": 507293.638
+    },
+    {
+        "day": "120321",
+        "temperature": "30",
+        "concentration[uM]": 3,
+        "media[Fi]": 565340.3960000001
+    },
+    {
+        "day": "120321",
+        "temperature": "30",
+        "concentration[uM]": 5,
+        "media[Fi]": 494842.52733333333
+    },
+    {
+        "day": "120321",
+        "temperature": "37",
+        "concentration[uM]": 5,
+        "media[Fi]": 500104.305
+    },
+    {
+        "day": "120321",
+        "temperature": "37",
+        "concentration[uM]": 3,
+        "media[Fi]": 538068.352
+    },
+    {
+        "day": "120321",
+        "temperature": "37",
+        "concentration[uM]": 5,
+        "media[Fi]": 474685.39700000006
+    }
+]
