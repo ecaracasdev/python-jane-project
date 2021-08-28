@@ -2,103 +2,133 @@
     {
         "day": "110321",
         "temperature": "25",
-        "concentration[uM]": 3,
-        "media[Fi]": 611757.6860000001
+        "concentration_uM": 3,
+        "max_intensities": [
+            630343.591,
+            581315.337,
+            623614.13
+        ],
+        "media_Fi": 611757.6860000001
     },
     {
         "day": "110321",
         "temperature": "25",
-        "concentration[uM]": 5,
-        "media[Fi]": 523625.86466666666
+        "concentration_uM": 5,
+        "max_intensities": [
+            520040.366,
+            532506.372,
+            518330.856
+        ],
+        "media_Fi": 523625.86466666666
     },
     {
         "day": "110321",
         "temperature": "30",
-        "concentration[uM]": 5,
-        "media[Fi]": 518330.856
+        "concentration_uM": 3,
+        "max_intensities": [
+            620958.895,
+            573038.59,
+            590382.987
+        ],
+        "media_Fi": 594793.4906666667
     },
     {
         "day": "110321",
         "temperature": "30",
-        "concentration[uM]": 3,
-        "media[Fi]": 594793.4906666667
-    },
-    {
-        "day": "110321",
-        "temperature": "30",
-        "concentration[uM]": 5,
-        "media[Fi]": 518239.29033333325
-    },
-    {
-        "day": "110321",
-        "temperature": "37",
-        "concentration[uM]": 5,
-        "media[Fi]": 514145.819
+        "concentration_uM": 5,
+        "max_intensities": [
+            522591.517,
+            517980.535,
+            514145.819
+        ],
+        "media_Fi": 518239.29033333325
     },
     {
         "day": "110321",
         "temperature": "37",
-        "concentration[uM]": 3,
-        "media[Fi]": 575844.5016666666
+        "concentration_uM": 3,
+        "max_intensities": [
+            608097.899,
+            551485.535,
+            567950.071
+        ],
+        "media_Fi": 575844.5016666666
     },
     {
         "day": "110321",
         "temperature": "37",
-        "concentration[uM]": 5,
-        "media[Fi]": 495729.8803333333
+        "concentration_uM": 5,
+        "max_intensities": [
+            500315.115,
+            492987.73,
+            493886.796
+        ],
+        "media_Fi": 495729.8803333333
     },
     {
         "day": "120321",
         "temperature": "25",
-        "concentration[uM]": 5,
-        "media[Fi]": 493886.796
+        "concentration_uM": 3,
+        "max_intensities": [
+            557654.285,
+            678623.67,
+            549173.908
+        ],
+        "media_Fi": 595150.621
     },
     {
         "day": "120321",
         "temperature": "25",
-        "concentration[uM]": 3,
-        "media[Fi]": 595150.621
-    },
-    {
-        "day": "120321",
-        "temperature": "25",
-        "concentration[uM]": 5,
-        "media[Fi]": 511127.7
-    },
-    {
-        "day": "120321",
-        "temperature": "30",
-        "concentration[uM]": 5,
-        "media[Fi]": 507293.638
+        "concentration_uM": 5,
+        "max_intensities": [
+            508796.931,
+            517292.531,
+            507293.638
+        ],
+        "media_Fi": 511127.7
     },
     {
         "day": "120321",
         "temperature": "30",
-        "concentration[uM]": 3,
-        "media[Fi]": 565340.3960000001
+        "concentration_uM": 3,
+        "max_intensities": [
+            576445.918,
+            583924.38,
+            535650.89
+        ],
+        "media_Fi": 565340.3960000001
     },
     {
         "day": "120321",
         "temperature": "30",
-        "concentration[uM]": 5,
-        "media[Fi]": 494842.52733333333
+        "concentration_uM": 5,
+        "max_intensities": [
+            498141.869,
+            486281.408,
+            500104.305
+        ],
+        "media_Fi": 494842.52733333333
     },
     {
         "day": "120321",
         "temperature": "37",
-        "concentration[uM]": 5,
-        "media[Fi]": 500104.305
+        "concentration_uM": 3,
+        "max_intensities": [
+            532021.433,
+            562233.763,
+            519949.86
+        ],
+        "media_Fi": 538068.352
     },
     {
         "day": "120321",
         "temperature": "37",
-        "concentration[uM]": 3,
-        "media[Fi]": 538068.352
-    },
-    {
-        "day": "120321",
-        "temperature": "37",
-        "concentration[uM]": 5,
-        "media[Fi]": 474685.39700000006
+        "concentration_uM": 5,
+        "max_intensities": [
+            472397.362,
+            469527.237,
+            482131.592
+        ],
+        "media_Fi": 474685.39700000006
     }
 ]
