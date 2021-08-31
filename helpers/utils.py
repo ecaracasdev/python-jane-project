@@ -40,4 +40,3 @@ def is_csv(file_name):
     if re.search(r'\b.csv\b',file_name):
         flag = True
     return flag
-        
