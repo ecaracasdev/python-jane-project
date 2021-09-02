@@ -19,7 +19,6 @@ def replacer(initial_string, ch,
         if len(checklist)>= occurrence:
             lst1[checklist[occurrence-1]] = replacing_character
  
-    # print(''.join(lst1))
     return ''.join(lst1)
 
 def is_valid_data(str):
