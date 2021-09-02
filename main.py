@@ -53,5 +53,7 @@ def main():
         writer.save()
         print(f'{days_directory[i]}.xlsx succesfully created')
 
+    # print(f'file_list {file_data_list}')
+
 if __name__ == "__main__":
     main()

@@ -5,6 +5,9 @@ datos
 __pycache__
 ejemplo
 1testcode
+<<<<<<< HEAD
 build
 dist
 main.spec
+=======
+>>>>>>> 8f50e94e3490914947029c7fcfe9c7fe46c6fde0
