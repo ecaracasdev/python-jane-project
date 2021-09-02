@@ -1,5 +1,6 @@
-import helpers.utils as helper
-import helpers.process_data as proccess_data
+from classes.statistics_data import StatisticsData
+from classes.file_data import FileData
+import helpers.fs as fs
 import pandas as pd
 import os
 
@@ -25,33 +26,31 @@ def main():
 
             for k in range(temperature_count):
                 path_concentration_file = f'{path}{days_directory[i]}/{temperature_directory[j]}/{concentration_file[k]}'
-                concentration = concentration_file[k].split()[0]
-
-                if concentration.lower() == 'control':
-                        concentration = '0'
-
-                max_intensity = ''
-                if helper.is_txt(concentration_file[k]):
-                    max_intensity = proccess_data.max_intensity_from_txt(path_concentration_file)
-                if helper.is_csv(concentration_file[k]):
-                    max_intensity = proccess_data.max_intensity_from_csv(path_concentration_file)
+                file_data = FileData(path_concentration_file, concentration_file[k])
+                concentration = file_data.get_concentration()
+                max_intensity = file_data.get_max_intensity()
                 
                 if (concentration == concentration_aux or concentration_aux == '') and max_intensity != '':
                     concentration_list.append(max_intensity)
                     concentration_aux = concentration
 
                 if ((concentration != concentration_aux and concentration_aux != '') or k == temperature_count-1) and max_intensity != '':
-                    file_data_dicctionary = proccess_data.set_dicctionary_data(data=concentration_list, day=days_directory[i], temperature=temperature_directory[j], aux=concentration_aux)
-
+                    statistics_data = StatisticsData(concentration_list)
+                    statistics_dicctionary = statistics_data.get_organized_data(day=days_directory[i],temperature=temperature_directory[j],aux=concentration_aux)
+                    
                     concentration_list = []
                     concentration_list.append(max_intensity)
-                    file_data_list.append(file_data_dicctionary)
+                    file_data_list.append(statistics_dicctionary)
                     concentration_aux = concentration
 
-            proccess_data.create_excel_sheet(file_data_list, day=days_directory[i], temperature=temperature_directory[j], writer=writer)
+            fs.create_excel_sheet(file_data_list, day=days_directory[i], temperature=temperature_directory[j], writer=writer)
 
         writer.save()
         print(f'{days_directory[i]}.xlsx succesfully created')
+
+    # print(f'file_list {file_data_list}')
+
+    
 
 if __name__ == "__main__":
     main()
