@@ -1,7 +1,6 @@
 import helpers.utils as helper
-from helpers.statisticsClass import Intensity
 import pandas as pd
-import numpy as np
+import re
 
 def max_intensity_from_txt(file_path):
     intensity_list = [] 
@@ -27,27 +26,35 @@ def max_intensity_from_csv(file_path):
   return max_intensity
 
 def set_dicctionary_data(data, day, temperature, aux):
-    file_data = Intensity(data)
-    #add a set concentration data for the file_data in the Intensity class
-    return file_data.set_organized_data(day,temperature,aux)
+    mean = sum(data)/float(len(data))
+    max_intensity_sample_one = ''
+    max_intensity_sample_two = ''
+    max_intensity_sample_three = ''
+    if len(data) == 3:
+        max_intensity_sample_one = data[0]
+        max_intensity_sample_two = data[1]
+        max_intensity_sample_three = data[2]
+    if len(data) == 2:
+        max_intensity_sample_one = data[0]
+        max_intensity_sample_two = data[1]
+        max_intensity_sample_three = ''
+
+    file_data_dicctionary = {
+        "day": day,
+        "temperature": temperature,
+        "concentration_uM": int(re.findall(r'\d+', aux)[0]),
+        "max_intensity_sample_one": max_intensity_sample_one,
+        "max_intensity_sample_two": max_intensity_sample_two,
+        "max_intensity_sample_three": max_intensity_sample_three,
+        "media_Fi": mean
+    }
+    return file_data_dicctionary 
 
 def create_excel_sheet(file_data_list, day, temperature, writer):
     #create a new dataframe for each new share read 
     file_df = pd.DataFrame(file_data_list)
-
-    # set the concentration y a local scope variable that will be used for alterate the columns of the file_df
-    list_filtered = list(filter(lambda data: data['concentration_uM'] == 0, file_data_list))
-    media_Fo = list_filtered[0]['media_Fi']
-
     file_df_filtered = file_df[(file_df["day"] == day) & (file_df["temperature"] == temperature) & (file_df["concentration_uM"] != 0) ].copy(deep=True)
-    file_df_filtered['Fo/Fi'] = file_df_filtered.apply(lambda row: media_Fo/row.media_Fi, axis=1)
-    file_df_filtered['log[M]'] = file_df_filtered.apply(lambda row: np.log(row.concentration_uM), axis=1)
-    file_df_filtered['log[Fo-Fi/Fo]'] = file_df_filtered.apply(lambda row: np.log((media_Fo- row.media_Fi)/media_Fo), axis=1)
     file_df_filtered.sort_values(by=['concentration_uM'], inplace=True, ascending=True)
-
-    # filter the file_df but this time for the concentration only an make a new row in the excel with this info
-    concentration_df = file_df[(file_df["day"] == day) & (file_df["temperature"] == temperature) & (file_df["concentration_uM"] == 0) ].copy(deep=True)
 
     # write dataframe to excel
     file_df_filtered.to_excel(writer, temperature) 
-    concentration_df.to_excel(writer, temperature, startrow= 13)
