@@ -2,3 +2,6 @@ datos
 1testcode/muestras
 1testcode/csv
 /**/*.xlsx
+__pycache__
+ejemplo
+1testcode
